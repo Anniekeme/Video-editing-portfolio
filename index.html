@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moses — Video Editor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Nav -->
+    <nav>
+      <a href="#" class="logo">Moses</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+      <p class="hero-eyebrow">Video Editor & Podcast Producer</p>
+      <h1>Edits that make people <span>stop scrolling.</span></h1>
+      <p>
+        Podcast production, short-form social content, and sports &
+        entertainment video my edits are crafted to hold attention and drive
+        real results.
+      </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">See My Work</a>
+        <a href="#contact" class="btn-ghost">Work With Me</a>
+      </div>
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <!-- Work Section -->
+    <section id="work">
+      <div class="reveal">
+        <p class="section-label">Selected Work</p>
+        <h2>What I've Edited.</h2>
+        <p class="sub">
+          A focused look at my best edits — podcasts, short-form content, and
+          sports parody.
+        </p>
+      </div>
+
+      <!-- Featured -->
+      <div class="featured-wrap reveal" onclick="openModal('5wpxwMs7YiQ')">
+        <img
+          src="https://img.youtube.com/vi/5wpxwMs7YiQ/hqdefault.jpg"
+          alt="Featured Edit"
+        />
+        <div class="featured-overlay">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+          </div>
+          <div class="featured-meta">
+            <h3>Podcast Edit — Full Episode</h3>
+            <p>Audio cleanup · Video edit · sound design</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="video-grid" id="videoGrid"></div>
+
+      <!-- Stats -->
+      <div class="stats-row reveal">
+        <div class="stat">
+          <div class="num">50<span>+</span></div>
+          <div class="label">Projects delivered</div>
+        </div>
+        <div class="stat">
+          <div class="num">5<span>yrs</span></div>
+          <div class="label">In the industry</div>
+        </div>
+        <div class="stat">
+          <div class="num">100<span>%</span></div>
+          <div class="label">Client satisfaction</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="section-label">About</p>
+          <h2>Precision edits. Real results.</h2>
+          <p>
+            I'm Moses — a freelance media and podcast producer and content
+            creator specializing in podcast editing, short-form social media
+            content, and sports & entertainment video scriptwriting.
+          </p>
+          <p>
+            I work with creators, brands, and podcasters to turn raw footage and
+            recordings into polished, engaging content that keeps audiences
+            watching.
+          </p>
+          <div class="skills-list">
+            <span class="skill-chip">Podcast Editing</span>
+            <span class="skill-chip">Short-Form Video</span>
+            <span class="skill-chip">Sports Commentary</span>
+            <span class="skill-chip">Sound Design</span>
+            <span class="skill-chip">Script Writing</span>
+            <span class="skill-chip">Audio Editing</span>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="av-box">
+            <div class="av-noise"></div>
+          </div>
+          <div class="av-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta-section">
+      <div class="reveal">
+        <p class="section-label">Let's Talk</p>
+        <h2>Ready to elevate your content?</h2>
+        <p>
+          Whether it's a podcast, a reel, or a full series — let's make it
+          great.
+        </p>
+        <a
+          href="mailto:anniemoses425@gmail.com?subject=Inquiry%20from%20Portfolio%20Site"
+          class="btn-primary"
+          >Get In Touch</a
+        >
+      </div>
+    </section>
+
+    <footer>© 2026 Moses. All rights reserved.</footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" onclick="handleModalClick(event)">
+      <div class="modal-inner">
+        <button class="modal-close" onclick="closeModal()">✕ Close</button>
+        <iframe
+          id="player"
+          src=""
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+          "
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

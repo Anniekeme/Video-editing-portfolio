@@ -934,6 +934,15 @@ section .sub {
   font-weight: 300;
 }
 
+.contact-email {
+  color: var(--white);
+  margin-top: 1rem;
+  margin-bottom: 4.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 /* Footer */
 footer {
   border-top: 0.5px solid rgba(255, 255, 255, 0.08);

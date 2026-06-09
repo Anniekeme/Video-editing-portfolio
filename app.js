@@ -34,7 +34,7 @@ const videos = [
     title: "Audio Edit | Before & After",
     cat: "Social Media",
   },
-  { id: "GAzB95vvKNw", title: "Sports Parody", cat: "Entertainment" },
+  { id: "8COkBo07mq0", title: "Roblox gaming", cat: "Gaming" },
   { id: "9dfBLcEJ2R4", title: "Podcast", cat: "Podcast" },
 ];
 
@@ -98,3 +98,14 @@ const obs = new IntersectionObserver(
   { threshold: 0.12 },
 );
 reveals.forEach((el) => obs.observe(el));
+
+const testimonialToggles = document.querySelectorAll(".testimonial-toggle");
+
+testimonialToggles.forEach((button) => {
+  const card = button.closest(".testimonial-card");
+  button.addEventListener("click", () => {
+    const expanded = card.classList.toggle("expanded");
+    button.textContent = expanded ? "Read less" : "Read more";
+    button.setAttribute("aria-expanded", expanded);
+  });
+});

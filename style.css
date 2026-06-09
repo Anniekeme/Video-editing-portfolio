@@ -157,7 +157,7 @@ nav ul a:hover {
 
 .hero-doodle {
   position: absolute;
-  opacity: 0.2;
+  opacity: 0.13;
   transform: translate3d(0, 0, 0);
   animation: floatDoodle 6s ease-in-out infinite;
 }
@@ -683,7 +683,7 @@ section .sub {
 
 .testimonials-section {
   margin-top: 4rem;
-  padding: 1rem 0 2rem;
+  padding: 1rem 2rem 2rem;
 }
 
 .testimonials-section h2 {
@@ -697,10 +697,53 @@ section .sub {
   display: flex;
   gap: 1.5rem;
   overflow-x: auto;
-  padding-bottom: 0.75rem;
-  padding-left: 0.25rem;
+  padding: 0 0 0.75rem;
   scroll-snap-type: x mandatory;
   scroll-padding-left: 2rem;
+  position: relative;
+}
+
+.testimonial-track::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-right: 2px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+  transform: translateY(-50%) rotate(45deg);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.testimonial-scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  padding-right: 0.5rem;
+}
+
+.testimonial-scroll-arrow {
+  display: inline-flex;
+  font-size: 1.2rem;
+  transform: translateX(0);
+  animation: arrowPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
 }
 
 .testimonial-track > .testimonial-card {
@@ -1073,5 +1116,36 @@ footer {
   }
   .stats-row {
     grid-template-columns: 1fr;
+  }
+
+  .testimonials-section {
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .testimonial-track {
+    gap: 1rem;
+    scroll-padding-left: 1.5rem;
+  }
+
+  .testimonial-track::after {
+    right: 0.75rem;
+    width: 28px;
+    height: 28px;
+  }
+
+  .testimonial-card {
+    min-width: 280px;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .testimonial-body {
+    max-height: 140px;
+  }
+
+  .testimonial-scroll-hint {
+    justify-content: flex-start;
+    padding-right: 0;
+    font-size: 0.95rem;
   }
 }
